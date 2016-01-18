@@ -9,8 +9,8 @@ PICTURE_PATH=~/Pictures/wallpaper/ahwahnee2.jpg
 #FEED_URL=http://pixelcaster.com/yosemite/webcams/ahwahnee2.jpg
 FEED_URL=http://pixelcaster.com/yosemite/webcams/yosfalls.jpg
 OUT=`date +%F-%H-%M`.jpg
-# this helps to prevent mate reading the file while we are writing to it
-sleep 10
-wget -r $FEED_URL -O $PICTURE_PATH
-cp $PICTURE_PATH $STORAGE_FOLDER/$OUT
-echo $OUT
+
+wget -r "$FEED_URL" -O "$STORAGE_FOLDER/$OUT"
+
+# set the last downloaded file as background
+set_background.sh "$STORAGE_FOLDER/$OUT"
