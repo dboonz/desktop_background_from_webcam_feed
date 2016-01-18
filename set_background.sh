@@ -8,7 +8,7 @@ case "$WINDOWMANAGER" in
     # See /home/tenner/src/SyncWall-2.0.0-src/src/SystemIntegration.cpp
     gsettings set org.gnome.desktop.background draw-background true
     gsettings set org.gnome.desktop.background picture-options spanned
-    gsettings set org.gnome.desktop.background picture-uri "$1"
+    gsettings set org.gnome.desktop.background picture-uri "file://$1"
     ;;
 "GNOME3")
     gsettings set org.mate.background draw-background true
