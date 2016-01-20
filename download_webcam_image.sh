@@ -6,8 +6,8 @@
 STORAGE_FOLDER=~/Pictures/webcamlog/
 PICTURE_PATH=~/Pictures/wallpaper/ahwahnee2.jpg
 # This one is actually more beautiful, but it is broken
-#FEED_URL=http://pixelcaster.com/yosemite/webcams/ahwahnee2.jpg
-FEED_URL=http://pixelcaster.com/yosemite/webcams/yosfalls.jpg
+FEED_URL=http://pixelcaster.com/yosemite/webcams/ahwahnee2.jpg
+#FEED_URL=http://pixelcaster.com/yosemite/webcams/yosfalls.jpg
 OUT=`date +%F-%H-%M`.jpg
 # this helps to prevent mate reading the file while we are writing to it
 sleep 10
