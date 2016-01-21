@@ -23,14 +23,14 @@ function set_background() {
 	esac
 	}
 
-STORAGE_FOLDER=~/Pictures/webcamlog/
+STORAGE_FOLDER=~/Pictures/webcamlog
 PICTURE_PATH=~/Pictures/wallpaper/ahwahnee2.jpg
 # This one is actually more beautiful, but it is broken
 FEED_URL=http://pixelcaster.com/yosemite/webcams/ahwahnee2.jpg
 #FEED_URL=http://pixelcaster.com/yosemite/webcams/yosfalls.jpg
 OUT=`date +%F-%H-%M`.jpg
 
-wget -r "$FEED_URL" -O "$STORAGE_FOLDER/$OUT"
+wget  --output-document=$STORAGE_FOLDER/$OUT -r "$FEED_URL"
 
 # set the last downloaded file as background
 set_background "$STORAGE_FOLDER/$OUT"
