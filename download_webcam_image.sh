@@ -23,6 +23,9 @@ function set_background() {
 	esac
 	}
 
+
+
+
 STORAGE_FOLDER=~/Pictures/webcamlog
 PICTURE_PATH=~/Pictures/wallpaper/ahwahnee2.jpg
 # This one is actually more beautiful, but it is broken
@@ -31,6 +34,12 @@ FEED_URL=http://pixelcaster.com/yosemite/webcams/ahwahnee2.jpg
 OUT=`date +%F-%H-%M`.jpg
 
 wget  --output-document=$STORAGE_FOLDER/$OUT -r "$FEED_URL"
+# as a backup, save the last image also in the right directory
+cp $STORAGE_FOLDER/$OUT $PICTURE_PATH
 
-# set the last downloaded file as background
+# set the last downloaded file as background. This is unstable inside a cron job
 set_background "$STORAGE_FOLDER/$OUT"
+
+# use feh to set background
+feh --bg-scale $STORAGE_FOLDER/$OUT
+
